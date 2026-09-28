@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --qf-blue: #4b7ff5;
+    --qf-cyan: #25afe0;
+    --qf-navy: #10264a;
+    --qf-ink: #12315d;
+  }
+
+  html,
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* QuickFile Sign Up Now Button (from quickfile.co.uk) */
+.btn-qf-join {
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: inset 0 1px 0 #ffffff, 0 4px 0 #334155, 0 3px 6px rgba(0, 0, 0, 0.45);
+  color: #334155;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-qf-join:hover {
+  background-color: #ffffff;
+}
+
+.btn-qf-join:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 1px 0 #ffffff, 0 2px 0 #334155, 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* QuickFile Smooth Flowing Wave Animations */
+@keyframes waveDriftSlow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes waveDriftMedium {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes waveDriftFast {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-wave-slow {
+  animation: waveDriftSlow 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-wave-medium {
+  animation: waveDriftMedium 14s linear infinite;
+  will-change: transform;
+}
+
+.animate-wave-fast {
+  animation: waveDriftFast 10s linear infinite;
+  will-change: transform;
+}
+
+.animate-float-device {
+  animation: floatSoft 5s ease-in-out infinite;
+}

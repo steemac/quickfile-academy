@@ -1,0 +1,6 @@
+{
+  "name": "QuickFile Essentials - Customer Training",
+  "description": "Learn the basics and master advanced bookkeeping with official QuickFile video courses, practical exercises, and certification assessments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
